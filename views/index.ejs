@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Da' Lib - Public Booklog</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>-Da' Lib-</h1><h2>Public Booklog</h2>
+  <h3>Borrowing so many books you're losing track of them? Are your friends getting upset you have yet to return them too? Well, here's a public book log for you (and your friends too!)</h3>
+  <!-- <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flilwizz.files.wordpress.com%2F2010%2F03%2Flibraries-12.png&f=1&nofb=1" alt=""> -->
+  <!-- <img src="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80" alt=""> -->
+  <h2>Add Book Here</h2>
+
+  <form action="/messages" method="POST">
+    <input type="text" placeholder="Book Title" name="BookTitle">
+    <input type="text" placeholder="Book Owner's Name" name="BookOwner">
+    <input type="text" placeholder="Borrower's Name" name="BorrowerName">
+    <input type="text" placeholder="Date: MM/DD/YY" name="Date">
+    <button type="submit">Submit</button>
+  </form>
+
+
+
+  <h4>-Da' Booklog-</h4>
+  <tbody>
+    <table>
+      <tr>
+        <th class="topRow">Book</th>
+        <th class="topRow">Book Owner</th>
+        <th class="topRow">Borrower</th>
+        <th class="topRow">Date</th>
+        <th class="topRow">Trash</th>
+      </tr>
+    <% for(var i=0; i<messages.length; i++) {%>
+      <tr class="message">
+        <th class="bookRow"><%=messages[i].BookTitle%></th>
+        <th class="bookRow"><%=messages[i].BookOwner%></th>
+        <th class="bookRow"><%=messages[i].BorrowerName%></th>
+        <th class="bookRow"><%=messages[i].Date%></th>
+        <th><i class="fa fa-trash" aria-hidden="true"></i></th>
+      </tr>
+    <% } %>
+    </table>
+  </tbody>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>
