@@ -1,4 +1,4 @@
-![21 Savage](public/21savage.jpg)
+![alt tag](https://github.com/HelenAmanuel/PersonalExpress_BookLog/blob/master/Screen%20Shot%202019-11-16%20at%207.03.56%20PM.png)
 
 ## Installation
 
